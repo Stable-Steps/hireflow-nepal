@@ -16,3 +16,25 @@
 - Google
 - Github
 - LinkedIn
+
+## updated database structure for hireflow
+
+Company
+│
+├───────────── Users
+│
+├───────────── Invitations
+│
+├───────────── Jobs
+│
+├───────────── Candidates
+│ │
+│ │
+│ Applications
+│ │ │
+│ │ │
+│ Interviews Notes
+│ │
+│ Attachments
+│
+└───────────── Pipeline Stages

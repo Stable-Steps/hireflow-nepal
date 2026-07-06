@@ -9,6 +9,7 @@ import { authMiddleware } from "./middleware/auth.middleware.js";
 
 import { login } from "./controllers/job.controller.js";
 import companyRoutes from "./routes/company.routes.js";
+import pipelineTemplateRoutes from "./routes/pipeline-template.routes.js";
 
 const app = express();
 
@@ -24,6 +25,8 @@ app.get("/health", (req, res) => {
 
 app.use("/api/jobs", jobRoutes);
 app.use("/api/company", companyRoutes);
+
+app.use("/api/pipeline-templates", pipelineTemplateRoutes);
 
 // test route to check auth middleware -- start
 app.get("/me", authMiddleware, (req, res) => {
