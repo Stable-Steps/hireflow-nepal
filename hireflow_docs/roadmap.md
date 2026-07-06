@@ -1,5 +1,16 @@
 # HireFlow Roadmap
 
+Jobs
+Companies
+↓
+Pipeline Templates
+↓
+Pipeline Stages
+↓
+Candidates
+↓
+Applications
+
 ## Phase 0 - Foundation
 
 - [x] Express + TypeScript
@@ -25,15 +36,13 @@
 
 ## Phase 3 - Companies
 
-- [ ] Company service
-- [ ] Company controller
-- [ ] Company routes
-- [ ] Company testing
+- [x] Company CRUD
+- [x] Company controller
+- [x] Company routes
+- [x] Company testing
 
 ## Phase 4 - Members
 
 - [ ] Invite user
 - [ ] List members
 - [ ] Update member role
-
-...

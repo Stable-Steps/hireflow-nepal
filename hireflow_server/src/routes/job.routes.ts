@@ -6,8 +6,10 @@ import {
   updateJob,
   deleteJob,
 } from "../controllers/job.controller.js";
+import { authMiddleware } from "../middleware/auth.middleware.js";
 
 const router = Router();
+router.use(authMiddleware);
 
 // GET all jobs
 router.get("/", getJobs);

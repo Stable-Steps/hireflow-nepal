@@ -23,3 +23,23 @@ One user belongs to one company (MVP)
 
 Reason:
 Simplifies onboarding.
+
+---
+
+Every route parameter should use the resource name:
+
+companyId
+
+jobId
+
+candidateId
+
+applicationId
+
+templateId
+
+stageId
+
+interviewId
+
+noteId
