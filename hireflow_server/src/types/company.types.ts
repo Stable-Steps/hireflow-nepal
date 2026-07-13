@@ -4,6 +4,13 @@ export interface Company {
   slug: string;
   logoUrl: string | null;
   createdAt: string;
+  deleted_at: string | null;
+}
+
+export interface CreateCompanyDto {
+  name: string;
+  slug: string;
+  logo_url?: string | null;
 }
 export interface CompanyParams {
   id: string;

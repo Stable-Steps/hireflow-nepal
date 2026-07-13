@@ -11,6 +11,16 @@ import {
 import { ApiResponse } from "../types/api.types.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
+export const createCompany = asyncHandler(
+  async (req: Request, res: Response<ApiResponse<Company>>) => {
+    const company = await CompanyService.createCompany(req.body);
+    res.status(201).json({
+      success: true,
+      data: company,
+    });
+  },
+);
+
 export const getCurrentCompany = asyncHandler(
   async (req: Request, res: Response<ApiResponse<Company>>) => {
     const company = await CompanyService.getCompanyById(req.user!.company_id);
