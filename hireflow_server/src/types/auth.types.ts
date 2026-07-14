@@ -1,4 +1,9 @@
-export type UserRole = "admin" | "recruiter" | "viewer";
+export type UserRole =
+  | "owner"
+  | "admin"
+  | "recruiter"
+  | "hiring_manager"
+  | "viewer";
 
 export interface AuthUser {
   id: string;
