@@ -9,3 +9,15 @@ Completed:
 Git Tag:
 
 v0.1.0
+
+Onboarding
+
+□ Create company
+
+□ Create owner user
+
+□ Create default pipeline
+
+□ Create default stages
+
+□ Send welcome email

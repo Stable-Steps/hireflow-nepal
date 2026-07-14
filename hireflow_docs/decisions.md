@@ -43,3 +43,29 @@ stageId
 interviewId
 
 noteId
+
+---
+
+company-onboarding.service.ts is created
+This service will orchestrate multiple services.
+
+Company Service
+↓
+Create Company
+↓
+Update User
+↓
+Create Default Pipeline
+↓
+Return Company
+
+company-onboarding.service.ts
+
+will not know how:
+
+companies are created
+pipelines are created
+
+It simply coordinates them.
+
+---
