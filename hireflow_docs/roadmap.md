@@ -41,7 +41,18 @@ Applications
 - [x] Company routes
 - [x] Company testing
 
-## Phase 4 - Members
+## Phase 4 - Candidates
+
+Foundation ✅
+Authentication ✅
+Company ✅
+Company Onboarding ✅
+Jobs ✅
+Pipeline Templates ✅
+Pipeline Stages ✅
+Candidates ✅
+
+## Phase 5 - Members
 
 - [ ] Invite user
 - [ ] List members
