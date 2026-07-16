@@ -51,3 +51,11 @@ PATCH /api/applications/:id/stage
 ## Notes
 
 POST /api/notes
+
+## Candidates
+
+GET /api/candidates
+POST /api/candidates
+GET /api/candidates/:id
+PATCH /api/candidates/:id
+DELETE /api/candidates/:id

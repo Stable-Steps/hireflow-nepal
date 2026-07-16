@@ -47,3 +47,28 @@ company_id
 name
 position
 color
+
+## candidates
+
+Primary Key
+
+- id
+
+Relationships
+
+- company_id -> companies.id
+
+Soft Delete
+
+- deleted_at
+
+Unique Constraints
+
+- (company_id, email)
+
+Indexes
+
+- company_id
+- email
+- deleted_at
+- (last_name, first_name)
