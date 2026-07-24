@@ -144,3 +144,22 @@ export const remove = async (
     throw new Error(error.message);
   }
 };
+
+export const getFirstStage = async (
+  templateId: string,
+): Promise<PipelineStage> => {
+  const { data, error } = await supabase
+    .from("pipeline_stages")
+    .select("*")
+    .eq("template_id", templateId)
+    .is("deleted_at", null)
+    .order("display_order", { ascending: true })
+    .limit(1)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+};
