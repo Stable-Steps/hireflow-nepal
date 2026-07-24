@@ -95,3 +95,21 @@ export const remove = async (id: string, companyId: string): Promise<void> => {
     throw new Error(error.message);
   }
 };
+
+export const getDefaultPipeline = async (
+  companyId: string,
+): Promise<PipelineTemplate> => {
+  const { data, error } = await supabase
+    .from("pipeline_templates")
+    .select("*")
+    .eq("company_id", companyId)
+    .eq("is_default", true)
+    .is("deleted_at", null)
+    .single();
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+};
