@@ -59,3 +59,27 @@ POST /api/candidates
 GET /api/candidates/:id
 PATCH /api/candidates/:id
 DELETE /api/candidates/:id
+
+# Applications
+
+GET /api/applications
+POST /api/applications
+GET /api/applications/:id
+PATCH /api/applications/:id
+DELETE /api/applications/:id
+
+POST /api/applications
+
+Creates a new application by:
+
+- Finding the company's default pipeline
+- Selecting the first pipeline stage
+- Creating the application
+- Assigning the first stage automatically
+
+Request
+
+{
+"candidate_id": "uuid",
+"job_id": "uuid"
+}

@@ -72,3 +72,51 @@ Indexes
 - email
 - deleted_at
 - (last_name, first_name)
+
+## applications
+
+### Purpose
+
+Connects candidates to jobs and tracks their progress through the hiring pipeline.
+
+### Relationships
+
+- company_id -> companies.id
+- candidate_id -> candidates.id
+- job_id -> jobs.id
+- pipeline_stage_id -> pipeline_stages.id
+- assigned_recruiter_id -> users.id
+
+### Fields
+
+- id
+- company_id
+- candidate_id
+- job_id
+- pipeline_stage_id
+- assigned_recruiter_id
+- status
+- applied_at
+- created_at
+- updated_at
+- deleted_at
+
+### Constraints
+
+- UNIQUE(candidate_id, job_id)
+
+### Indexes
+
+- company_id
+- candidate_id
+- job_id
+- pipeline_stage_id
+- assigned_recruiter_id
+- deleted_at
+
+### Notes
+
+- Soft delete supported via deleted_at.
+- One candidate can apply to many jobs.
+- One job can have many candidates.
+- Applications are isolated per company.
