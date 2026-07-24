@@ -62,3 +62,46 @@ Onboarding
 - Update ✅
 - Soft Delete ✅
 - Duplicate Email Validation ✅
+
+## ✅ Applications Module
+
+### Database
+
+- Applications table
+- Multi-tenant architecture
+- Soft delete
+- Recruiter assignment
+- Application status
+- Unique candidate/job constraint
+- Performance indexes
+
+### Backend
+
+- Application constants
+- Types
+- CRUD service
+- Workflow service
+- Controller
+- Routes
+
+### Workflow
+
+Candidate
+↓
+Find Default Pipeline
+↓
+Find First Stage
+↓
+Create Application
+↓
+Assign Initial Stage
+
+### Testing
+
+- Create Application ✅
+- Auto Assign First Stage ✅
+- Get All ✅
+- Get By ID ✅
+- Update ✅
+- Soft Delete ✅
+- Duplicate Prevention ✅
