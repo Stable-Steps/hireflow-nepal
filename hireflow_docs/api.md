@@ -138,3 +138,11 @@ GET /api/notes/:applicationId
 POST /api/notes
 PATCH /api/notes/:id
 DELETE /api/notes/:id
+
+## Interviews
+
+GET /api/interviews/application/:applicationId
+GET /api/interviews/:id
+POST /api/interviews
+PATCH /api/interviews/:id
+DELETE /api/interviews/:id
