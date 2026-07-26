@@ -131,3 +131,10 @@ Request
 {
 "pipeline_stage_id": "uuid"
 }
+
+## Notes
+
+GET /api/notes/:applicationId
+POST /api/notes
+PATCH /api/notes/:id
+DELETE /api/notes/:id

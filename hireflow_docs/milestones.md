@@ -169,3 +169,32 @@ Move Through Pipeline
 - Delete Application ✅
 - Load Pipeline Board ✅
 - Move Candidate Between Stages ✅
+
+## ✅ Notes Module
+
+### Database
+
+- Notes table
+- Multi-tenant support
+- Soft delete
+- Timestamp support
+
+### Backend
+
+- Note types
+- Note service
+- Note controller
+- Note routes
+
+### Workflow
+
+- Create note
+- Log NOTE_ADDED activity
+
+### Testing
+
+- Create ✅
+- Get by application ✅
+- Update ✅
+- Soft delete ✅
+- Activity logging ✅
