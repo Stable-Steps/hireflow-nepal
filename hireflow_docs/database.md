@@ -157,3 +157,37 @@ Notes
 - Each candidate can apply once per job.
 - Every application belongs to a company.
 - Applications automatically start in the first stage of the default pipeline.
+
+## notes
+
+Purpose
+
+- Stores recruiter notes on applications.
+
+Relationships
+
+- company_id -> companies.id
+- application_id -> applications.id
+- author_id -> users.id
+
+Fields
+
+- id
+- company_id
+- application_id
+- author_id
+- content
+- created_at
+- updated_at
+- deleted_at
+
+Soft delete
+
+- deleted_at
+
+Indexes
+
+- company_id
+- application_id
+- author_id
+- deleted_at

@@ -2,6 +2,8 @@ import { supabase } from "../db/supabase.js";
 import * as PipelineTemplateService from "./pipeline-template.service.js";
 import * as PipelineStageService from "./pipeline-stage.service.js";
 import * as ApplicationService from "./application.service.js";
+import * as ActivityService from "./activity.service.js";
+import { ActivityType } from "../constants/activity.js";
 
 import {
   MoveApplicationDto,
@@ -110,7 +112,29 @@ export const moveApplication = async (
     throw new Error("Invalid pipeline stage.");
   }
 
-  return ApplicationService.updateApplication(companyId, applicationId, {
-    pipeline_stage_id: payload.pipeline_stage_id,
+  const existingApplication = await ApplicationService.getApplicationById(
+    companyId,
+    applicationId,
+  );
+
+  const application = await ApplicationService.updateApplication(
+    companyId,
+    applicationId,
+    {
+      pipeline_stage_id: payload.pipeline_stage_id,
+    },
+  );
+
+  await ActivityService.createActivity(companyId, {
+    application_id: application.id,
+    actor_id: null,
+    type: ActivityType.STAGE_CHANGED,
+    description: "Candidate moved to a new stage",
+    metadata: {
+      from_stage_id: existingApplication.pipeline_stage_id,
+      to_stage_id: payload.pipeline_stage_id,
+    },
   });
+
+  return application;
 };

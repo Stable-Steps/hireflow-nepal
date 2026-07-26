@@ -1,0 +1,10 @@
+export const ActivityType = {
+  APPLICATION_CREATED: "APPLICATION_CREATED",
+  STAGE_CHANGED: "STAGE_CHANGED",
+  RECRUITER_ASSIGNED: "RECRUITER_ASSIGNED",
+  NOTE_ADDED: "NOTE_ADDED",
+  INTERVIEW_SCHEDULED: "INTERVIEW_SCHEDULED",
+  STATUS_CHANGED: "STATUS_CHANGED",
+} as const;
+
+export type ActivityType = (typeof ActivityType)[keyof typeof ActivityType];
