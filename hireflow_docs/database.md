@@ -120,3 +120,40 @@ Connects candidates to jobs and tracks their progress through the hiring pipelin
 - One candidate can apply to many jobs.
 - One job can have many candidates.
 - Applications are isolated per company.
+
+## applications
+
+Purpose
+
+Stores candidate applications and hiring progress.
+
+Relationships
+
+- company_id -> companies.id
+- candidate_id -> candidates.id
+- job_id -> jobs.id
+- pipeline_stage_id -> pipeline_stages.id
+- assigned_recruiter_id -> users.id
+
+Constraints
+
+- UNIQUE(candidate_id, job_id)
+
+Indexes
+
+- company_id
+- candidate_id
+- job_id
+- pipeline_stage_id
+- assigned_recruiter_id
+- deleted_at
+
+Soft Delete
+
+- deleted_at
+
+Notes
+
+- Each candidate can apply once per job.
+- Every application belongs to a company.
+- Applications automatically start in the first stage of the default pipeline.

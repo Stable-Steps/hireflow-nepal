@@ -18,4 +18,6 @@ router.patch("/:id", ApplicationController.updateApplication);
 
 router.delete("/:id", ApplicationController.deleteApplication);
 
+router.patch("/:id/move", ApplicationController.moveApplication);
+
 export default router;

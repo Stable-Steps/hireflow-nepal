@@ -154,12 +154,14 @@ export const getFirstStage = async (
     .eq("template_id", templateId)
     .is("deleted_at", null)
     .order("display_order", { ascending: true })
-    .limit(1)
-    .single();
+    .limit(1);
 
   if (error) {
     throw new Error(error.message);
   }
 
-  return data;
+  const stage = data?.[0];
+  if (!stage) throw new Error("No stages found");
+
+  return stage;
 };

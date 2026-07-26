@@ -3,6 +3,9 @@ import { Request, Response } from "express";
 import * as ApplicationService from "../services/application.service.js";
 import * as ApplicationWorkflowService from "../services/application-workflow.service.js";
 
+import * as PipelineBoardService from "../services/pipeline-board.service.js";
+import { MoveApplicationDto } from "../types/pipeline-board.types.js";
+
 import {
   Application,
   ApplicationParams,
@@ -88,6 +91,24 @@ export const deleteApplication = asyncHandler(
     res.json({
       success: true,
       data: null,
+    });
+  },
+);
+
+export const moveApplication = asyncHandler(
+  async (
+    req: Request<ApplicationParams, any, MoveApplicationDto>,
+    res: Response<ApiResponse<Application>>,
+  ) => {
+    const application = await PipelineBoardService.moveApplication(
+      req.user!.company_id,
+      req.params.id,
+      req.body,
+    );
+
+    res.json({
+      success: true,
+      data: application,
     });
   },
 );

@@ -105,11 +105,13 @@ export const getDefaultPipeline = async (
     .eq("company_id", companyId)
     .eq("is_default", true)
     .is("deleted_at", null)
-    .single();
+    .limit(1);
 
   if (error) {
     throw new Error(error.message);
   }
+  const pipeline = data?.[0];
+  if (!pipeline) throw new Error("Default pipeline not found");
 
-  return data;
+  return pipeline;
 };

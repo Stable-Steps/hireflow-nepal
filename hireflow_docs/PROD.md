@@ -94,3 +94,30 @@ Can review candidates and leave feedback.
 - Facebook integration
 
 These will be built after MVP validation.
+
+## Backend Progress
+
+### Core
+
+- [x] Authentication
+- [x] Company
+- [x] Company Onboarding
+- [x] Jobs
+- [x] Candidates
+- [x] Applications
+
+### Pipeline
+
+- [x] Pipeline Templates
+- [x] Pipeline Stages
+- [x] Pipeline Board
+
+### Remaining
+
+- [ ] Candidate Timeline
+- [ ] Notes
+- [ ] Interviews
+- [ ] Email
+- [ ] Attachments
+- [ ] Analytics
+- [ ] Dashboard

@@ -83,3 +83,51 @@ Request
 "candidate_id": "uuid",
 "job_id": "uuid"
 }
+
+# Applications
+
+GET /api/applications
+POST /api/applications
+GET /api/applications/:id
+PATCH /api/applications/:id
+DELETE /api/applications/:id
+
+POST /api/applications
+
+Request
+
+{
+"candidate_id": "uuid",
+"job_id": "uuid"
+}
+
+Automatically
+
+- Finds default pipeline
+- Finds first stage
+- Creates application
+- Assigns first stage
+
+---
+
+# Pipeline Board
+
+GET /api/pipeline-board/:jobId
+
+Returns
+
+[
+{
+"id": "...",
+"name": "Applied",
+"applications": []
+}
+]
+
+PATCH /api/applications/:id/move
+
+Request
+
+{
+"pipeline_stage_id": "uuid"
+}

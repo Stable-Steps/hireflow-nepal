@@ -105,3 +105,67 @@ Assign Initial Stage
 - Update ✅
 - Soft Delete ✅
 - Duplicate Prevention ✅
+
+# ✅ Pipeline Board
+
+## Completed
+
+### Applications
+
+- Applications database schema
+- Multi-tenant support
+- Soft delete
+- Assigned recruiter support
+- Application status
+- Automatic default pipeline assignment
+- Duplicate application prevention
+
+### Services
+
+- application.service
+- application-workflow.service
+
+### Controllers
+
+- Application CRUD
+- Apply Candidate workflow
+
+### Routes
+
+GET /api/applications
+POST /api/applications
+GET /api/applications/:id
+PATCH /api/applications/:id
+DELETE /api/applications/:id
+
+### Pipeline Board
+
+- Pipeline board service
+- Pipeline board controller
+- Pipeline board routes
+- Load board by job
+- Move application between stages
+
+### Workflow
+
+Candidate
+↓
+Apply to Job
+↓
+Default Pipeline
+↓
+First Stage
+↓
+Application Created
+↓
+Move Through Pipeline
+
+### Testing
+
+- Create Application ✅
+- Auto Assign First Stage ✅
+- Get Applications ✅
+- Update Application ✅
+- Delete Application ✅
+- Load Pipeline Board ✅
+- Move Candidate Between Stages ✅
