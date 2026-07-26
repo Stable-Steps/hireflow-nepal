@@ -191,3 +191,44 @@ Indexes
 - application_id
 - author_id
 - deleted_at
+
+## interviews
+
+Purpose
+
+- Stores scheduled interviews linked to applications.
+
+Relationships
+
+- company_id -> companies.id
+- application_id -> applications.id
+- interviewer_id -> users.id
+
+Fields
+
+- id
+- company_id
+- application_id
+- interviewer_id
+- title
+- starts_at
+- ends_at
+- meeting_url
+- location
+- notes
+- status
+- created_at
+- updated_at
+- deleted_at
+
+Constraints
+
+- ends_at > starts_at
+
+Indexes
+
+- company_id
+- application_id
+- interviewer_id
+- deleted_at
+- starts_at

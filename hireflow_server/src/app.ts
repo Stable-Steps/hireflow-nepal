@@ -15,6 +15,7 @@ import applicationRoutes from "./routes/application.routes.js";
 import pipelineBoardRoutes from "./routes/pipeline-board.routes.js";
 import activityRoutes from "./routes/activity.routes.js";
 import noteRoutes from "./routes/note.routes.js";
+import interviewRoutes from "./routes/interview.routes.js";
 
 const app = express();
 
@@ -38,6 +39,7 @@ app.use("/api/applications", applicationRoutes);
 app.use("/api/pipeline-board", pipelineBoardRoutes);
 app.use("/api/activities", activityRoutes);
 app.use("/api/notes", noteRoutes);
+app.use("/api/interviews", interviewRoutes);
 
 // test route to check auth middleware -- start
 app.get("/me", authMiddleware, (req, res) => {
