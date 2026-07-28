@@ -5,6 +5,8 @@ export const ActivityType = {
   NOTE_ADDED: "NOTE_ADDED",
   INTERVIEW_SCHEDULED: "INTERVIEW_SCHEDULED",
   STATUS_CHANGED: "STATUS_CHANGED",
+  ATTACHMENT_ADDED: "ATTACHMENT_ADDED",
+  EMAIL_SENT: "EMAIL_SENT",
 } as const;
 
 export type ActivityType = (typeof ActivityType)[keyof typeof ActivityType];

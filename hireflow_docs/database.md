@@ -232,3 +232,48 @@ Indexes
 - interviewer_id
 - deleted_at
 - starts_at
+
+## emails
+
+Purpose
+
+- Stores email communication linked to applications.
+
+Relationships
+
+- company_id -> companies.id
+- application_id -> applications.id
+- sent_by -> users.id
+
+Fields
+
+- id
+- company_id
+- application_id
+- sent_by
+- direction
+- status
+- from_address
+- to_address
+- cc
+- bcc
+- subject
+- body
+- provider
+- provider_message_id
+- sent_at
+- created_at
+- updated_at
+- deleted_at
+
+Soft delete
+
+- deleted_at
+
+Indexes
+
+- company_id
+- application_id
+- sent_by
+- deleted_at
+- sent_at

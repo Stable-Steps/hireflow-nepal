@@ -146,3 +146,11 @@ GET /api/interviews/:id
 POST /api/interviews
 PATCH /api/interviews/:id
 DELETE /api/interviews/:id
+
+## Emails
+
+GET /api/emails/application/:applicationId
+GET /api/emails/:id
+POST /api/emails
+PATCH /api/emails/:id
+DELETE /api/emails/:id
