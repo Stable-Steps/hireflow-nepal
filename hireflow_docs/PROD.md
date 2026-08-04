@@ -114,10 +114,14 @@ These will be built after MVP validation.
 
 ### Remaining
 
-- [ ] Candidate Timeline
-- [ ] Notes
-- [ ] Interviews
-- [ ] Email
+- [x] Candidate Timeline
+- [x] Notes
+- [x] Interviews
+- [x] Email
 - [ ] Attachments
 - [ ] Analytics
 - [ ] Dashboard
+
+- [x] Resume parsing
+- [x] AI candidate summary
+- [x] AI interview questions

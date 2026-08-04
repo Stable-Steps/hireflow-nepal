@@ -258,3 +258,20 @@ Move Through Pipeline
 - Update ✅
 - Soft delete ✅
 - Activity logging ✅
+
+## ✅ AI Match Module
+
+### Backend
+
+- AI service
+- AI controller
+- AI routes
+
+### Feature
+
+- Candidate-job match scoring
+
+### Testing
+
+- Match score returned ✅
+- Tenant isolation enforced ✅
