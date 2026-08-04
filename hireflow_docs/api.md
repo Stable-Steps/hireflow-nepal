@@ -154,3 +154,22 @@ GET /api/emails/:id
 POST /api/emails
 PATCH /api/emails/:id
 DELETE /api/emails/:id
+
+## AI
+
+POST /api/ai/match
+
+Request
+{
+"candidate_id": "uuid",
+"job_id": "uuid"
+}
+
+Returns
+
+- score
+- verdict
+- summary
+- strengths
+- gaps
+- recommendation

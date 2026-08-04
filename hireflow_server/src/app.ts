@@ -18,6 +18,8 @@ import noteRoutes from "./routes/note.routes.js";
 import interviewRoutes from "./routes/interview.routes.js";
 import attachmentRoutes from "./routes/attachment.routes.js";
 import emailRoutes from "./routes/email.routes.js";
+import analyticsRoutes from "./routes/analytics.routes.js";
+import aiRoutes from "./routes/ai.routes.js";
 
 const app = express();
 
@@ -44,6 +46,8 @@ app.use("/api/notes", noteRoutes);
 app.use("/api/interviews", interviewRoutes);
 app.use("/api/attachments", attachmentRoutes);
 app.use("/api/emails", emailRoutes);
+app.use("/api/analytics", analyticsRoutes);
+app.use("/api/ai", aiRoutes);
 
 // test route to check auth middleware -- start
 app.get("/me", authMiddleware, (req, res) => {
